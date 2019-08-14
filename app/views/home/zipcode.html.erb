@@ -1,0 +1,20 @@
+<div class="jumbotron <%= @api_color %>">
+  <h1 class="display-4">
+    <% if @output.blank? %>
+      <%= @myerrormsg %>
+    <% else %>
+      Air Quality Index: <%= @final_output[0]['AQI'] %> </br>
+      Reporting Area: <%= @final_output[0]['ReportingArea'] %></br>
+      Category Number: <%= @final_output[0]['Category']['Number']%> </br>
+      Date Observed: <%= @final_output[0]['DateObserved'] %></br>
+      Current Time: <%= @Now %>
+      </h1>
+        <p class="lead">This is the current Air Quality Score for <%= @final_output[0]['ReportingArea']%>, <%= @final_output[0]['StateCode']%>: <%= @final_output[0]['AQI'] %></p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <% end %> 
+  </div>  
+</br>
+  
+<%= @zip_query %>
