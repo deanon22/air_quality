@@ -9,6 +9,7 @@ class HomeController < ApplicationController
 
       if @output.empty?
         @myerrormsg = "Please Enter a ZipCode"
+        @api_color = "pink"
       else        
         @final_output = @output
         @myAQI = @final_output[0]['AQI']
