@@ -1,7 +1,8 @@
 <div class="jumbotron <%= @api_color %>">
   <h1 class="display-4">
     <% if @output.empty? %>
-      <%= @myerrormsg %>
+    <id="MyError">
+        <%= @myerrormsg %>
     <% else %>
       Air Quality Index: <%= @final_output[0]['AQI'] %> </br>
       Reporting Area: <%= @final_output[0]['ReportingArea'] %></br>
@@ -15,4 +16,3 @@
   </div>  
 </br>
   
-<%= @zip_query %>
